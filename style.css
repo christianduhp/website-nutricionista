@@ -10,8 +10,8 @@ body {
 
 .navbar {
     background-color: var(--main-color);
-    position: absolute;
     width: 100%;
+    min-height: 140px
 }
 
 .nav-link {
@@ -25,8 +25,15 @@ body {
 
 .inicio {
     background-image: url(./assets/bg2.jpg);
-    height: 100vh;
-    
+    min-height: calc(100vh - 140px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .sobre {
@@ -54,12 +61,11 @@ body {
     background-color: var(--second-color);
 }
 
-.inicio,
 .servicos,
 .sobre,
 .contato {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
