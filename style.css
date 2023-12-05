@@ -71,7 +71,6 @@ body {
     max-width: 65em;
     border: none;
     border-radius: 2em;
-   
 }
 
 .footer {
@@ -107,6 +106,7 @@ a {
 .nav-link:active{
     color: var(--second-color);
 }
+
 .btn-primary:hover,
 .btn-primary:active {
     --bs-btn-hover-bg: var(--second-color);
