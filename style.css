@@ -30,31 +30,19 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .sobre {
-    background-color: var(--main-color);
-    
+    background-color: var(--main-color);  
 }
 
 .servicos {
     background-image: url(./assets/bg4.jpg);
 }
 
-.contato {
-    background-color: var(--main-color);
-}
-
 .inicio_container {
     width: 100%;
-    max-width: 100%;
     background-color: rgba(131, 115, 84, 0.8);
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 .form_contact {
@@ -84,14 +72,6 @@ body {
     border: none;
     border-radius: 2em;
    
-}
-
-.card-text {
-    text-align: justify;
-}
-
-.img_servicos {
-    width: 13%;
 }
 
 .footer {
@@ -165,23 +145,10 @@ a {
         background-attachment: scroll;
         height: auto;
     }
-
-    .img_servicos{
-        width: 20%;
-        padding: 0;
-    }
-
-    .servicos_title{
-        color: var(--main-color);
-        font-size: 2.5em;
-    }  
-
     
 }
 
-@media screen and (min-width: 750px) and (max-width: 1024px) {
-
-    
+@media screen and (min-width: 750px) and (max-width: 1024px) {    
     .inicio,
     .sobre,
     .servicos,

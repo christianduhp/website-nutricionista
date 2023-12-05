@@ -9,6 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -43,12 +44,12 @@
     <button class="contact_whatsapp btn btn-outline-success me-2 mb-4 active" type="button"><a target="_blank"
         href="https://wa.link/qffxil"><i class="bi bi-whatsapp fs-4"></i></a> </button>
 
-    <section class="inicio">
-      <div class="inicio_container mt-0 mx-5">
+    <section class="inicio d-flex flex-column align-items-center justify-content-center">
+      <div class="inicio_container mt-0 mx-5 p-4">
         <div class="row mx-0 mx-md-5 my-3">
           <div class="col-md-6 text-left">
             <h1 class="text display-4 mb-4 fw-bold">Bem-vindo à Jornada da Saúde</h1>
-            <p class="text lead mb-md-4 fs-3 fw-semibold">Transforme sua vida através de uma alimentação equilibrada e
+            <p class="text lead mb-0 mb-md-4 fs-3 fw-semibold">Transforme sua vida através de uma alimentação equilibrada e
               saudável.</p>
             <a href="#sobre" class="btn btn-primary btn-lg mt-4 d-none d-md-inline-block">Saiba Mais</a>
           </div>
@@ -59,7 +60,7 @@
                 <div class="col-md-6 col-lg-6 mb-4">
                   <div class="card h-100">
                     <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
-                      <i class="bi bi-arrow-down-circle fs-2 mb-3"></i>
+                      <i class="fa-solid fa-circle-arrow-down fs-2 mb-3"></i>
                       <h5 class="card-title">Perda de Peso</h5>
                     </div>
                   </div>
@@ -67,7 +68,7 @@
                 <div class="col-md-6 col-lg-6 mb-4">
                   <div class="card h-100">
                     <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
-                      <i class="bi bi-lightning-charge-fill fs-2 mb-3"></i>
+                      <i class="fa-solid fa-bolt fs-2 mb-3"></i>
                       <h5 class="card-title">Ganho de Energia</h5>
                     </div>
                   </div>
@@ -75,7 +76,7 @@
                 <div class="col-md-6 col-lg-6 mb-4">
                   <div class="card h-100">
                     <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
-                      <i class="bi bi-heart-fill fs-2 mb-3"></i>
+                      <i class="fa-solid fa-heart fs-2 mb-3"></i>
                       <h5 class="card-title">Hábitos Saudáveis</h5>
                     </div>
                   </div>
@@ -83,8 +84,8 @@
                 <div class="col-md-6 col-lg-6 mb-4">
                   <div class="card h-100">
                     <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
-                      <i class="bi bi-emoji-smile-fill fs-2 mb-3"></i>
-                      <h5 class="card-title">Bem-Estar</h5>
+                      <i class="fa-solid fa-dumbbell fs-2 mb-3"></i>
+                      <h5 class="card-title">Hipertrofia</h5>
                     </div>
                   </div>
                 </div>
@@ -99,14 +100,14 @@
 
 
     <section id="sobre" class="sobre">
-      <section class="align-text-center justify-content-center text-center">
+      <section class="justify-content-center ">
         <div class="card d-flex flex-column flex-md-row align-items-center">
           <img src="assets/profissional.png" class="card-img-top img-profissional img-fluid" alt="Foto Profissional">
-          <div class="card-body p-5">
+          <div class="card-body p-5 d-flex flex-column align-items-center align-items-md-start align-items-lg-start">
             <h4 class="card-title mb-4 fs-2">Prazer, Daniel!</h4>
-            <p class="card-text fs-5 my-5">Sou nutricionista, comprometido em guiar você para uma vida mais
+            <p class="card-text fs-5 my-5 text-left">Sou nutricionista, comprometido em guiar você para uma vida mais
               saudável. Com experiência no atendimento a diversos clientes, ofereço consultas personalizadas para
-              ajudá-lo a alcançar seus objetivos de saúde, seja perda de peso, ganho de energia ou adoção de hábitos
+              ajudá-lo a alcançar seus objetivos de saúde, seja perda de peso, ganho de massa muscular ou adoção de hábitos
               mais saudáveis.
               <br><br>
               Agende sua consulta agora e dê o primeiro passo para uma alimentação equilibrada que nutre
@@ -122,8 +123,8 @@
       <h2 class="servicos_title fw-bold fs-md-1 fw-bold my-3 text display-4 ">Como funciona?</h2>
       <div class="row-cols-1 mx-3">
         <div class="col my-3">
-          <div class="card d-flex flex-column flex-md-row align-items-center">
-            <img src="./assets/servicos/imagem_servico_1.png" class="card-img-top img_servicos p-lg-3 p-md-3 pt-4" alt="Serviço 1">
+          <div class="card d-flex flex-column flex-md-row align-items-center p-3">
+            <i class="fa-solid fa-weight-scale fs-1 m-1"></i>
             <div class="card-body d-flex flex-column align-items-center">
               <h5 class="card-title fw-bold">Avaliação Nutricional</h5>
               <p class="card-text">Realizo uma avaliação detalhada para entender suas necessidades e criar um plano
@@ -133,8 +134,8 @@
           </div>
         </div>
         <div class="col my-3">
-          <div class="card d-flex flex-column flex-md-row align-items-center">
-            <img src="./assets/servicos/imagem_servico_2.png" class="card-img-top img_servicos p-lg-3 p-md-3 pt-4" alt="Serviço 2">
+          <div class="card d-flex flex-column flex-md-row align-items-center p-3">
+            <i class="fa-solid fa-file-pen fs-1 m-1"></i>
             <div class="card-body d-flex flex-column align-items-center">
               <h5 class="card-title fw-bold">Plano Alimentar Personalizado</h5>
               <p class="card-text">
@@ -146,8 +147,8 @@
           </div>
         </div>
         <div class="col my-3">
-          <div class="card d-flex flex-column flex-md-row align-items-center">
-            <img src="./assets/servicos/imagem_servico_3.png" class="card-img-top img_servicos p-lg-3 p-md-3 pt-4" alt="Serviço 3">
+          <div class="card d-flex flex-column flex-md-row align-items-center p-3">
+            <i class="fa-solid fa-comments fs-1 m-1"></i>
             <div class="card-body d-flex flex-column align-items-center">
               <h5 class="card-title fw-bold">Acompanhamento</h5>
               <p class="card-text">
@@ -160,8 +161,8 @@
           </div>
         </div>
         <div class="col my-3">
-          <div class="card d-flex flex-column flex-md-row align-items-center">
-            <img src="./assets/servicos/imagem_servico_4.png" class="card-img-top img_servicos p-lg-3 p-md-3 pt-4" alt="Serviço 4">
+          <div class="card d-flex flex-column flex-md-row align-items-center p-3">
+            <i class="fa-solid fa-chalkboard-user fs-1 m-1"></i>
             <div class="card-body d-flex flex-column align-items-center">
               <h5 class="card-title fw-bold">Educação Nutricional</h5>
               <p class="card-text">
@@ -227,7 +228,7 @@
       </a>
     </div>
     <div>
-      <p class="mb-0">© 2023 Daniel Lima. Todos os direitos reservados.</p>
+      <p class="mb-0">© 2023 Daniel Lima - CRN³ 81750. Todos os direitos reservados.</p>
       <p class="mb-0">Desenvolvido por <a class="tex-de" href="mailto:christianoliver2010@gmail.com">Christian
           Oliveira</a></p>
     </div>
