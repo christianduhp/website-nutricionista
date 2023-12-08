@@ -24,7 +24,7 @@ body {
 }
 
 .inicio {
-    background-image: url(./assets/bg2.jpg);
+    background-image: url(./assets/bg-1.jpg);
     min-height: calc(100vh - 140px);
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,7 +37,11 @@ body {
 }
 
 .servicos {
-    background-image: url(./assets/bg4.jpg);
+    background-image: url(./assets/bg-2.jpg);
+}
+
+.servicos_boxes{
+    background-color: var(--main-color);
 }
 
 .inicio_container {
@@ -45,8 +49,12 @@ body {
     background-color: rgba(131, 115, 84, 0.8);
 }
 
+.contato{
+    background-image: url(assets/bg-3.jpg);
+}
+
 .form_contact {
-    background-color: var(--second-color);
+    background-color: rgba(131, 115, 84, 0.7);
 }
 
 .servicos,
@@ -130,6 +138,10 @@ a {
            
 .text {
     color: var(--main-color);
+}
+
+.servicos_title{
+    color: var(--font-color);
 }
 
 @media (max-width: 768px) {
