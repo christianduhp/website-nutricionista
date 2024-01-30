@@ -1,4 +1,4 @@
-# Nutricionista Website
+# Website Nutricionista
 
 Este projeto consiste em um website para um nutricionista, com funcionalidades que incluem formulário de contato, autenticação de usuários, área exclusiva para usuários e uma interface administrativa para gerenciar dados, avaliações físicas, planos alimentares, receitas, configurações do site e usuários.
 
@@ -46,7 +46,9 @@ Este projeto consiste em um website para um nutricionista, com funcionalidades q
 5. **Licença e Contribuição**
     - Licença
     - Como Contribuir
-
+      
+6. **Galeria de imagens**
+   
 ## 1. Introdução
 
 ### Sobre o Projeto
@@ -205,4 +207,34 @@ Este projeto é distribuído sob a licença [MIT](LICENSE).
 - Crie uma branch para sua contribuição.
 - Faça as alterações desejadas.
 - Envie um pull request para revisão.
+
+## 6. Galeria de imagens
+
+### Página inicial
+  
+![index](https://github.com/christianduhp/daniel-landingpage/assets/85292359/7879dc0f-5ae9-4214-a918-07efb73bc2cd)
+
+### Página do usuário
+
+![image](https://github.com/christianduhp/daniel-landingpage/assets/85292359/fd4bb96d-84f9-4e02-b6c7-089507a6a35f)
+![image](https://github.com/christianduhp/daniel-landingpage/assets/85292359/a165abed-912e-4e59-abfe-198c5953b9ea)
+![meals](https://github.com/christianduhp/daniel-landingpage/assets/85292359/4951778f-4b38-4ba9-acd7-090458070fbc)
+![questionnaires](https://github.com/christianduhp/daniel-landingpage/assets/85292359/6181c689-7217-4dab-9e04-9d3a8c7f22cf)
+![recipes](https://github.com/christianduhp/daniel-landingpage/assets/85292359/17e5238a-5244-40d7-93e9-956691c0740f)
+
+### Páginas do admnistrador
+![admin dash](https://github.com/christianduhp/daniel-landingpage/assets/85292359/9051651e-d8aa-433f-8ad3-9910ab1680e8)
+![image](https://github.com/christianduhp/daniel-landingpage/assets/85292359/b8cd02b1-8a5d-43e2-b130-e7e8288c6f13)
+![image](https://github.com/christianduhp/daniel-landingpage/assets/85292359/88c5aeab-5154-44c5-af72-d3625cffe25e)
+![image](https://github.com/christianduhp/daniel-landingpage/assets/85292359/5c68cb7d-4667-408f-85a9-69b8e5c5feae)
+![image](https://github.com/christianduhp/daniel-landingpage/assets/85292359/aedbc15e-8652-4f70-b26f-ce99202b071b)
+![landingpage](https://github.com/christianduhp/daniel-landingpage/assets/85292359/66c7f71e-40c7-42bd-81dd-907f89692517)
+
+### Páginas de Autenticação
+
+![image](https://github.com/christianduhp/daniel-landingpage/assets/85292359/70becf6a-fc0d-44bf-9c48-28b449c7ff64)
+![image](https://github.com/christianduhp/daniel-landingpage/assets/85292359/7ce2c3cf-5467-4653-840e-ccaa4953e9bf)
+![image](https://github.com/christianduhp/daniel-landingpage/assets/85292359/a1b008ef-f610-4677-9485-5e52cfee1f53)
+![signup](https://github.com/christianduhp/daniel-landingpage/assets/85292359/e76ed98b-80e6-4eb6-b0e2-675d55e3f531)
+
 
