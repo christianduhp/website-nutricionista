@@ -1,0 +1,13 @@
+body {
+  background-image: url("../images/bg/bg-2.jpg"); 
+  /* background-color: #1d1d1b; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.container {
+  border-radius: 2em;
+}

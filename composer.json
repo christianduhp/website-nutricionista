@@ -1,0 +1,17 @@
+{
+    "name": "christian/health_journey",
+    "type": "compose",
+    "autoload": {
+        "psr-4": {
+            "Christian\\HealthJourney\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Christian Oliveira",
+            "email": "christianoliver2010@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

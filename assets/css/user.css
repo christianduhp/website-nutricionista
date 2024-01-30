@@ -1,0 +1,144 @@
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url("../images/bg/bg-3.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar,
+.sidebar,
+.offcanvas {
+    background-color: var(--main-color);
+}
+
+.offcanvas {
+    max-width: 80%;
+}
+
+.btn_sidebar {
+    --bs-btn-hover-bg: var(--font-color);
+    --bs-btn-active-bg: var(--main-color);
+    --bs-btn-border-color: var(--main-color);
+    --bs-btn-bg: var(--main-color);
+    --bs-btn-border-color: var(--main-color);
+    --bs-btn-hover-border-color: var(--main-color);
+    --bs-btn-active-bg: var(--main-color);
+    --bs-btn-active-border-color: var(--main-color);
+    --bs-btn-color: var(--font-color);
+    --bs-btn-hover-color: var(--main-color);
+
+}
+
+.progress-bar,
+.btn_sidebar.active {
+    background-color: var(--font-color);
+    border: solid 2px var(--font-color);
+    color: var(--main-color);
+}
+
+.userName,
+hr {
+    color: var(--font-color);
+}
+
+.img-logo {
+    width: 70px;
+    height: auto
+}
+
+.navbar {
+    min-height: 0;
+}
+
+.main_container {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+}
+
+th,
+td,
+.user_name {
+    color: var(--font-color);
+}
+
+.card {
+    flex-direction: column;
+    max-width: none;
+    background-color: var(--main-color-opacity);
+}
+
+.name_container {
+    background-color: var(--main-color-opacity);
+}
+
+.table {
+    --bs-table-border-color: var(--font-color-opacity);
+
+}
+
+.profile_picture,
+.recipe-img {
+    max-height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.recipe-card {
+    min-width: 20em;
+
+}
+
+.messages_alerts {
+    width: 50%;
+}
+
+.form-check-input:checked {
+    background-color: var(--main-color);
+    border-color: var(--font-color);
+}
+
+
+@media (max-width: 992px) {
+
+    .main_container {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    body {
+
+        height: auto;
+    }
+
+    main {
+        padding-top: 5em;
+    }
+
+    .messages_alerts {
+        width: 100%;
+    }
+}
+
+
+input[type=checkbox] {
+    border: 2px solid var(--main-color);
+    box-shadow: none;
+}
+
+input[type=checkbox]:checked,
+input[type=checkbox]:focus {
+    background-color: var(--main-color);
+    color: var(--main-color);
+    border-color: var(--main-color);
+    box-shadow: none;
+    outline: none;
+}

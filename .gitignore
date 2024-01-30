@@ -1,0 +1,13 @@
+# Ignorar arquivos de lock do Composer
+composer.lock
+
+# Ignorar pastas de dependências e arquivos compilados
+vendor/
+
+# Ignorar arquivos de build
+*.min.js
+*.min.css
+
+# Ignorar arquivos de logs ou dados temporários
+logs/
+temp/

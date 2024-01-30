@@ -4,54 +4,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
   <title>Daniel Lima | Nutricionista</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/landingpage.css">
 
 </head>
 
 <body>
   <header>
-    <nav class="navbar">
-      <div class="container-fluid align-items-sm-center justify-content-md-between justify-content-center">
-        <a class="navbar-brand" href="#">
-          <img src="assets/logo.png" alt="Logo" width="300" height="auto"
-            class="d-inline-block align-text-top mx-3 mb-3">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid align-items-center justify-content-between">
+        <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="Logo Daniel Lima Nutricionista"
+            class="img-logo mx-md-5 pb-2"></a>
+        <a class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </a>
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#sobre">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#servicos">Serviços</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#consulta">Contato</a>
-          </li>
-        </ul>
+
+        <div class="offcanvas offcanvas-end justify-content-center" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header align-self-end">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body d-flex flex-column-reverse flex-lg-row ">
+            <ul class="navbar-nav justify-content-lg-end flex-grow-1 pe-3">
+              <ul class="navbar-nav gap-lg-4 px-1">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Início</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#consulta">Contato</a>
+                </li>
+              </ul>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item px-lg-2">
+                <a href="pages/user/dashboard.php" class="btn btn-primary-2 d-flex align-items-center">
+                  <i class="fas fa-user px-2"></i> Login
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
 
   <main>
-    <button class="contact_whatsapp btn btn-outline-success me-2 mb-4 active" type="button"><a target="_blank"
-        href="https://wa.link/qffxil"><i class="bi bi-whatsapp fs-4"></i></a> </button>
+    <button class="contact_whatsapp btn btn-outline-success me-2 mb-4 active" type="button">
+      <a target="_blank" href="" id="whatsappButton"><i class="bi bi-whatsapp fs-4"></i></a>
+    </button>
 
     <section class="inicio d-flex flex-column align-items-center justify-content-center">
-      <div class="inicio_container mt-0 mx-5 p-4">
+      <div class="bg-opacity mt-0 mx-5 p-4">
         <div class="row mx-0 mx-md-5 my-3">
           <div class="col-md-6 text-left">
             <h1 class="text display-4 mb-4 fw-bold">Bem-vindo à Jornada da Saúde</h1>
             <p class="text lead mb-0 mb-md-4 fs-3 fw-semibold">Transforme sua vida através de uma alimentação
-              equilibrada e
-              saudável.</p>
+              equilibrada e saudável.</p>
             <a href="#sobre" class="btn btn-primary btn-lg mt-4 d-none d-md-inline-block">Saiba Mais</a>
           </div>
 
@@ -60,7 +81,8 @@
               <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-6 mb-4">
                   <div class="card h-100">
-                    <div class="card-body px-0 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div
+                      class="card-body px-0 text-center d-flex flex-column align-items-center justify-content-center">
                       <i class="fa-solid fa-circle-arrow-down fs-2 mb-3"></i>
                       <h5 class="card-title">Perda de Peso</h5>
                     </div>
@@ -68,7 +90,8 @@
                 </div>
                 <div class="col-md-6 col-lg-6 mb-4">
                   <div class="card h-100">
-                    <div class="card-body px-0 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div
+                      class="card-body px-0 text-center d-flex flex-column align-items-center justify-content-center">
                       <i class="fa-solid fa-bolt fs-2 mb-3"></i>
                       <h5 class="card-title">Ganho de Energia</h5>
                     </div>
@@ -76,7 +99,8 @@
                 </div>
                 <div class="col-md-6 col-lg-6 mb-4">
                   <div class="card h-100">
-                    <div class="card-body px-0 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div
+                      class="card-body px-0 text-center d-flex flex-column align-items-center justify-content-center">
                       <i class="fa-solid fa-heart fs-2 mb-3"></i>
                       <h5 class="card-title">Hábitos Saudáveis</h5>
                     </div>
@@ -84,7 +108,8 @@
                 </div>
                 <div class="col-md-6 col-lg-6 mb-4">
                   <div class="card h-100">
-                    <div class="card-body px-0 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div
+                      class="card-body px-0 text-center d-flex flex-column align-items-center justify-content-center">
                       <i class="fa-solid fa-dumbbell fs-2 mb-3"></i>
                       <h5 class="card-title">Hipertrofia</h5>
                     </div>
@@ -101,131 +126,229 @@
     <section id="sobre" class="sobre">
       <section class="justify-content-center ">
         <div class="card d-flex flex-column flex-md-row align-items-center">
-          <img src="assets/profissional.png" class="card-img-top img-profissional img-fluid" alt="Foto Profissional">
+          <img src="assets/images/professional.png" class="card-img-top img-profissional img-fluid"
+            alt="Foto Profissional">
           <div class="card-body p-5 d-flex flex-column align-items-center align-items-md-start align-items-lg-start">
-            <h4 class="card-title m-0 fs-2">Prazer, Daniel!</h4>
-            <p class="card-text fs-5 my-5 text-left">Sou nutricionista, comprometido em guiar você para uma vida mais
-              saudável. Com experiência no atendimento a diversos clientes, ofereço consultas personalizadas para
-              ajudá-lo a alcançar seus objetivos de saúde, seja perda de peso, ganho de massa muscular ou adoção de
-              hábitos
-              mais saudáveis.
-              <br><br>
-              Agende sua consulta agora e dê o primeiro passo para uma alimentação equilibrada que nutre
-              corpo e mente. Invista no seu bem-estar!
+            <h4 class="card-title about-title m-0 fs-2"></h4>
+            <p class="card-text about-text fs-5 my-5 text-left">
             </p>
-            <a href="#consulta" class="btn_agendar_consulta p-2 py-3 border rounded fw-bold">Agendar Consulta</a>
+            <a href="#consulta" class="btn-primary-2 p-2 py-3 rounded fw-bold">Agendar Consulta</a>
           </div>
         </div>
       </section>
     </section>
 
     <section id="servicos" class="servicos">
-      <h2 class="servicos_title fw-bold fs-md-1 fw-bold my-3 text display-4 ">Como funciona?</h2>
-      <div class="row-cols-1 mx-3">
-        <div class="col my-3">
-          <div class="card d-flex flex-column flex-md-row align-items-center p-3">
-            <i class="fa-solid fa-weight-scale fs-1 m-1"></i>
-            <div class="card-body d-flex flex-column align-items-center">
-              <h5 class="card-title fw-bold">Avaliação Nutricional</h5>
-              <p class="card-text">Realizo uma avaliação detalhada para entender suas necessidades e criar um plano
-                personalizado. Inclui bioimpedância e antropometria. Solicito trazer exames para obtermos melhores
-                resultados no processo de emagrecimento ou ganho de massa.</p>
+
+
+      <section class=" bg-opacity my-md-5 p-md-5 mx-0 ">
+        <div class=" d-md-flex flex-column flex-lg-row align-items-center">
+          <div class="info m-5">
+            <h4 class="fw-bold fs-md-1 fw-bold text display-5">Acesso Exclusivo</h4>
+            <p class="card-text text fs-5 my-5 text-left fw-semibold">Para tornar essa jornada ainda melhor, você
+              terá acesso a recursos incríveis e muito mais. Uma plataforma que oferece uma experiência única, repleta
+              de
+              informações valiosas, planos personalizados e suporte contínuo. Este é apenas o começo da sua jornada
+              para
+              uma
+              vida mais saudável e equilibrada.</p>
+
+            <a href="#consulta" class="btn btn-primary p-2 py-3 rounded fw-semibold d-none d-md-inline-block">Agendar
+              Consulta</a>
+          </div>
+
+          <!-- swiper visível apenas em tablet e desktop -->
+          <div class="swiper px-5 mb-4 d-none d-md-block">
+            <div class="swiper-wrapper ">
+              <div class="swiper-slide rounded-4">
+                <img src="assets/images/exclusivo-dashboard.png" alt="Dashboard Exclusivo" class="img-fluid">
+                <h4 class="label">Dashboard Exclusivo</h4>
+              </div>
+
+              <div class="swiper-slide rounded-4">
+                <img src="assets/images/exclusivo-plano-alimentar.png" alt="Plano Alimentar Exclusivo"
+                  class="img-fluid">
+                <h4 class="label">Plano Alimentar Personalizado</h4>
+              </div>
+
+              <div class="swiper-slide rounded-4">
+                <img src="assets/images/exclusivo-receitas.png" alt="Receitas Exclusivas" class="img-fluid">
+                <h4 class="label">Receitas Exclusivas</h4>
+              </div>
+
+              <div class="swiper-slide rounded-4">
+                <img src="assets/images/exclusivo-questionarios.png" alt="Questionários Exclusivos" class="img-fluid">
+                <h4 class="label">Questionários Personalizados</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- swiper visível apenas em mobile -->
+          <div class="container d-md-none">
+            <h2 class="text text-center mt-5 mb-4">Você terá acesso a:</h2>
+            <div class="row">
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card flex-column rounded-4 text-center">
+                  <img src="assets/images/exclusivo-dashboard.png" alt="Dashboard Exclusivo"
+                    class="card-img-top img-fluid rounded-4">
+                  <div class="card-body">
+                    <h4 class="card-title label">Dashboard Exclusivo</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card flex-column rounded-4 text-center">
+                  <img src="assets/images/exclusivo-plano-alimentar.png" alt="Plano Alimentar Exclusivo"
+                    class="card-img-top img-fluid rounded-4">
+                  <div class="card-body">
+                    <h4 class="card-title label">Plano Alimentar Personalizado</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card flex-column rounded-4 text-center">
+                  <img src="assets/images/exclusivo-receitas.png" alt="Receitas Exclusivas"
+                    class="card-img-top img-fluid rounded-4">
+                  <div class="card-body">
+                    <h4 class="card-title label">Receitas Exclusivas</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card flex-column rounded-4 text-center">
+                  <img src="assets/images/exclusivo-questionarios.png" alt="Questionários Exclusivos"
+                    class="card-img-top img-fluid rounded-4">
+                  <div class="card-body">
+                    <h4 class="card-title label">Questionários Personalizados</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
+      <section>
+        <h4 class="servicos_title fw-bold fs-md-1 fw-bold mb-3 mt-5 mt-md-0 text display-4 text-center">Como funciona?</h4>
+        <div class="row-cols-1 mx-3 my-5">
+          <div class="col my-3">
+            <div class="card d-flex flex-column flex-md-row align-items-center p-3">
+              <i class="fa-solid fa-weight-scale fs-1 m-1"></i>
+              <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title fw-bold">Avaliação Nutricional</h5>
+                <p class="card-text">Realizo uma avaliação detalhada para entender suas necessidades e criar um plano
+                  personalizado. Inclui bioimpedância e antropometria. Solicito trazer exames para obtermos melhores
+                  resultados no processo de emagrecimento ou ganho de massa.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col my-3">
+            <div class="card d-flex flex-column flex-md-row align-items-center p-3">
+              <i class="fa-solid fa-file-pen fs-1 m-1"></i>
+              <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title fw-bold">Plano Alimentar Personalizado</h5>
+                <p class="card-text">
+                  Desenvolvo planos alimentares específicos, adaptados às suas metas, preferências alimentares e
+                  necessidades nutricionais. Utilizo uma abordagem personalizada para garantir que o plano atenda às
+                  suas
+                  expectativas e promova resultados positivos.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col my-3">
+            <div class="card d-flex flex-column flex-md-row align-items-center p-3">
+              <i class="fa-solid fa-comments fs-1 m-1"></i>
+              <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title fw-bold">Acompanhamento</h5>
+                <p class="card-text">
+                  Ofereço acompanhamento contínuo para ajudá-lo a alcançar seus objetivos de forma saudável e
+                  sustentável.
+                  Proporciono atendimento no conforto da sua casa, garantindo maior comodidade. Realizo consultas tanto
+                  presenciais quanto online. A primeira consulta é recomendada presencialmente para uma avaliação mais
+                  precisa ou, no mínimo, o retorno.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col my-3">
+            <div class="card d-flex flex-column flex-md-row align-items-center p-3">
+              <i class="fa-solid fa-chalkboard-user fs-1 m-1"></i>
+              <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title fw-bold">Educação Nutricional</h5>
+                <p class="card-text">
+                  Forneço informações educativas para capacitá-lo a tomar decisões alimentares mais saudáveis no dia a
+                  dia, incluindo a elaboração de listas de compras personalizadas para auxiliar nas suas escolhas
+                  alimentares.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col my-3">
-          <div class="card d-flex flex-column flex-md-row align-items-center p-3">
-            <i class="fa-solid fa-file-pen fs-1 m-1"></i>
-            <div class="card-body d-flex flex-column align-items-center">
-              <h5 class="card-title fw-bold">Plano Alimentar Personalizado</h5>
-              <p class="card-text">
-                Desenvolvo planos alimentares específicos, adaptados às suas metas, preferências alimentares e
-                necessidades nutricionais. Utilizo uma abordagem personalizada para garantir que o plano atenda às suas
-                expectativas e promova resultados positivos.
-              </p>
-            </div>
+      </section>
+
+    </section>
+
+    <section class="servicos_boxes w-100 p-4 p-lg-0">
+      <div class=" d-flex flex-wrap align-bottom flex-lg-nowrap justify-content-center">
+
+        <div class="card m-2 py-2 px-3 w-100">
+          <div
+            class="card-body px-0 text-center d-flex flex-lg-column gap-4 gap-lg-0 align-items-center justify-content-start">
+            <i class="fa-solid fas fa-carrot fs-2 mb-3"></i>
+            <h5 class="card-title">Vegetarianismo</h5>
           </div>
         </div>
-        <div class="col my-3">
-          <div class="card d-flex flex-column flex-md-row align-items-center p-3">
-            <i class="fa-solid fa-comments fs-1 m-1"></i>
-            <div class="card-body d-flex flex-column align-items-center">
-              <h5 class="card-title fw-bold">Acompanhamento</h5>
-              <p class="card-text">
-                Ofereço acompanhamento contínuo para ajudá-lo a alcançar seus objetivos de forma saudável e sustentável.
-                Proporciono atendimento no conforto da sua casa, garantindo maior comodidade. Realizo consultas tanto
-                presenciais quanto online. A primeira consulta é recomendada presencialmente para uma avaliação mais
-                precisa ou, no mínimo, o retorno.
-              </p>
-            </div>
+
+        <div class="card m-2 py-2 px-3 w-100">
+          <div
+            class="card-body px-0 text-center d-flex flex-lg-column gap-4 gap-lg-0 align-items-center justify-content-start">
+            <i class="fa-solid fa-apple-alt fs-2 mb-3"></i>
+            <h5 class="card-title">Dieta Equilibrada</h5>
           </div>
         </div>
-        <div class="col my-3">
-          <div class="card d-flex flex-column flex-md-row align-items-center p-3">
-            <i class="fa-solid fa-chalkboard-user fs-1 m-1"></i>
-            <div class="card-body d-flex flex-column align-items-center">
-              <h5 class="card-title fw-bold">Educação Nutricional</h5>
-              <p class="card-text">
-                Forneço informações educativas para capacitá-lo a tomar decisões alimentares mais saudáveis no dia a
-                dia, incluindo a elaboração de listas de compras personalizadas para auxiliar nas suas escolhas
-                alimentares.
-              </p>
-            </div>
+
+        <div class="card m-2 py-2 px-3 w-100">
+          <div
+            class="card-body px-0 text-center d-flex flex-lg-column gap-4 gap-lg-0 align-items-center justify-content-start">
+            <i class="fa-solid fa-utensils fs-2 mb-3"></i>
+            <h5 class="card-title">Planejamento de Refeições</h5>
+          </div>
+        </div>
+
+        <div class="card m-2 py-2 px-3 w-100">
+          <div
+            class="card-body px-0 text-center d-flex flex-lg-column gap-4 gap-lg-0 align-items-center justify-content-start">
+            <i class="fa-solid fa-futbol fs-2 mb-3"></i>
+            <h5 class="card-title">Nutrição Esportiva</h5>
+          </div>
+        </div>
+
+        <div class="card m-2 py-2 px-3 w-100">
+          <div
+            class="card-body px-0 text-center d-flex flex-lg-column gap-4 gap-lg-0 align-items-center justify-content-start">
+            <i class="fa-solid fa-dumbbell fs-2 mb-3"></i>
+            <h5 class="card-title">Nutrição para Hipertrofia</h5>
+          </div>
+        </div>
+
+        <div class="card m-2 py-2 px-3 w-100">
+          <div
+            class="card-body px-0 text-center d-flex flex-lg-column gap-4 gap-lg-0 align-items-center justify-content-start">
+            <i class="fa-solid fa-circle-arrow-down fs-2 mb-3"></i>
+            <h5 class="card-title">Perda de Peso</h5>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="servicos_boxes w-100 p-4 p-lg-0">
-      <div class=" d-flex flex-wrap align-bottom flex-lg-nowrap justify-content-center">
-       
-          <div class="card m-2 py-2 px-3 w-100">
-            <div class="card-body px-0 text-center d-flex flex-lg-column gap-4 gap-lg-0 align-items-center justify-content-start">
-              <i class="fa-solid fas fa-carrot fs-2 mb-3"></i>
-              <h5 class="card-title">Vegetarianismo</h5>
-            </div>
-          </div>
-       
-          <div class="card m-2 py-2 px-3 w-100">
-            <div class="card-body px-0 text-center d-flex flex-lg-column gap-4 gap-lg-0 align-items-center justify-content-start">
-              <i class="fa-solid fa-apple-alt fs-2 mb-3"></i>
-              <h5 class="card-title">Dieta Equilibrada</h5>
-            </div>
-          </div>
-     
-          <div class="card m-2 py-2 px-3 w-100">
-            <div class="card-body px-0 text-center d-flex flex-lg-column gap-4 gap-lg-0 align-items-center justify-content-start">
-              <i class="fa-solid fa-utensils fs-2 mb-3"></i>
-              <h5 class="card-title">Planejamento de Refeições</h5>
-            </div>
-          </div>
-       
-          <div class="card m-2 py-2 px-3 w-100">
-            <div class="card-body px-0 text-center d-flex flex-lg-column gap-4 gap-lg-0 align-items-center justify-content-start">
-              <i class="fa-solid fa-futbol fs-2 mb-3"></i>
-              <h5 class="card-title">Nutrição Esportiva</h5>
-            </div>
-          </div>
-
-          <div class="card m-2 py-2 px-3 w-100">
-            <div class="card-body px-0 text-center d-flex flex-lg-column gap-4 gap-lg-0 align-items-center justify-content-start">
-              <i class="fa-solid fa-dumbbell fs-2 mb-3"></i>
-              <h5 class="card-title">Nutrição para Musculação</h5>
-            </div>
-          </div>
-
-          <div class="card m-2 py-2 px-3 w-100">
-            <div class="card-body px-0 text-center d-flex flex-lg-column gap-4 gap-lg-0 align-items-center justify-content-start">
-              <i class="fa-solid fa-circle-arrow-down fs-2 mb-3"></i>
-              <h5 class="card-title">Perda de Peso</h5>
-            </div>
-          </div>
-      </div>
-    
-  </section>
-  
     <section id="consulta" class="contato d-flex flex-column justify-content-center text-center ">
-      <section class=" container py-4 ">
+      <section class="container py-4 ">
         <div class="row justify-content-center align-items-center">
           <div class="col-10 col-xl-8 px-0 ">
             <div class="form_contact rounded-5 p-3 mx-0">
@@ -247,41 +370,131 @@
                   <label for="floatingPhone">Telefone</label>
                 </div>
 
-                <select class="form-select mb-3" aria-label="Default select example" required>
-                  <option selected>Preferência de contato</option>
-                  <option value="1">Email</option>
-                  <option value="2">Whatsapp</option>
-                  <option value="3">Ligação</option>
+                <select class="form-select mb-3" id="contactPreference" aria-label="Default select example" required>
+                  <option disabled selected>Preferência de contato</option>
+                  <option value="Email">Email</option>
+                  <option value="Whatsapp">WhatsApp</option>
+                  <option value="Ligação">Ligação</option>
                 </select>
 
                 <button id="submitButton" type="button" class="btn btn-primary fs-4 mt-3 py-2 px-4">Enviar</button>
+
               </form>
+
+              <div id="alertMessages" class="mt-2">
+                <div id="loadingSpinner" class="text-center d-none">
+                  <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Carregando...</span>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
       </section>
     </section>
-
   </main>
 
   <footer class="footer text-center p-4 d-flex flex-column">
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/daniel-da-silva-lima-neto-843736121/" target="_blank"
-        rel="noopener noreferrer" class="text-decoration-none me-3">
+    <div class="social-links">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="text-decoration-none me-3 linkedin-link">
         <i class="bi bi-linkedin fs-3"></i>
       </a>
-      <a href="https://www.instagram.com/daniel.slneto/" target="_blank" rel="noopener noreferrer"
-        class="text-decoration-none">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="text-decoration-none instagram-link">
         <i class="bi bi-instagram fs-3"></i>
       </a>
     </div>
     <div>
-      <p class="mb-0">© 2023 Daniel Lima - CRN³ 81750. Todos os direitos reservados.</p>
-      <p class="mb-0">Desenvolvido por <a class="tex-de" href="mailto:christianoliver2010@gmail.com">Christian
+      <p class="mb-0 footer-text"></p>
+      <p class="mb-0">Desenvolvido por <a href="mailto:christianoliver2010@gmail.com">Christian
           Oliveira</a></p>
     </div>
 
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('data/landingpage.json')
+        .then(response => response.json())
+        .then(data => {
+
+          const whatsappLink = `https://wa.me/${data.contact.whatsapp}?text=${encodeURIComponent(data.contact.whatsapp_message)}`;
+          const currentYear = new Date().getFullYear();
+          const footerText = `© ${currentYear} ${data.name} - CRN³ ${data.contact.crn}. Todos os direitos reservados.`;
+
+          document.getElementById('whatsappButton').setAttribute('href', whatsappLink);
+
+          document.querySelector('.about-title').textContent = data.title;
+          document.querySelector('.about-text').innerHTML =
+            `<p class="card-text fs-5 text-left">${data.paragraph}</p>`;
+          document.querySelector('.linkedin-link').href = data.contact.linkedin;
+          document.querySelector('.instagram-link').href = data.contact.instagram;
+
+
+          document.querySelector('.footer-text').textContent = footerText;
+        })
+        .catch(error => console.error('Erro ao carregar o JSON:', error));
+    });
+
+    var swiper = new Swiper(".swiper", {
+      effect: "cards",
+      grabCursor: true,
+      initialSlide: 2,
+      speed: 500,
+      loop: true,
+      rotate: true,
+      mousewheel: {
+        invert: false,
+      },
+
+    });
+
+    $(document).ready(function () {
+      $("#submitButton").click(function () {
+        var name = $("#floatingName").val();
+        var email = $("#floatingEmail").val();
+        var phone = $("#floatingPhone").val();
+        var contactPreference = $("#contactPreference").val();
+
+        $("#loadingSpinner").removeClass("d-none");
+
+        $.ajax({
+          type: "POST",
+          url: "modules/functions/contact_landingpage.php",
+          data: {
+            floatingName: name,
+            floatingEmail: email,
+            floatingPhone: phone,
+            contactPreference: contactPreference
+          },
+          success: function (response) {
+           
+            $("#loadingSpinner").addClass("d-none");
+            $("#alertMessages").prepend(response);
+
+            setTimeout(function () {
+              $("#alertMessages").html("");
+            }, 5000);
+          },
+          error: function (error) {
+            $("#loadingSpinner").hide();
+            alert("Erro ao enviar e-mail: " + error.responseText);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
