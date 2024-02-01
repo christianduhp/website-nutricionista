@@ -1084,7 +1084,11 @@ CREATE TABLE `users` (
   `communication_preference` varchar(255) DEFAULT NULL,
   `payment_preference` varchar(255) DEFAULT NULL,
   `plan_name` varchar(255) DEFAULT 'Plano Padrão',
-  `selected_questionnaires` text DEFAULT 'Questionário Pré-Consulta'
+  `selected_questionnaires` text DEFAULT 'Questionário Pré-Consulta',
+  `cep` varchar(10) DEFAULT NULL,
+  `complement` varchar(255) DEFAULT NULL,
+  `uf` varchar(2) DEFAULT NULL,
+  `neighborhood` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

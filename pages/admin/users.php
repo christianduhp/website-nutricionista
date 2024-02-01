@@ -38,8 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <i class="fas fa-search"></i>
                                 </button>
                                 <a href="../../pages/auth/signup.php"
-                                class="btn btn-success ml-2 d-flex align-items-center rounded">
-                                <i class="fas fa-plus mx-1"></i>Nova Usuário</a>
+                                    class="btn btn-success ml-2 d-flex align-items-center rounded">
+                                    <i class="fas fa-plus mx-1"></i>Novo Usuário</a>
                             </div>
                         </div>
 
@@ -62,9 +62,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <th>Altura</th>
                                     <th>Gênero</th>
                                     <th>Nacionalidade</th>
+                                    <th>UF</th>
                                     <th>Cidade</th>
+                                    <th>CEP</th>
+                                    <th>Bairro</th>
                                     <th>Endereço</th>
                                     <th>Número</th>
+                                    <th>Complemento</th>
                                     <th>Data de Criação</th>
                                     <th>Ocupação</th>
                                     <th>Preferência Comunicação</th>
@@ -172,6 +176,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
 
                             <div class="form-group">
+                                <label for="editUserUF" class="col-form-label">UF</label>
+                                <div>
+                                    <input type="text" class="form-control" id="editUserUF" name="editUserUF">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="editUserCEP" class="col-form-label">CEP</label>
+                                <div>
+                                    <input type="text" class="form-control" id="editUserCEP" name="editUserCEP">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="editUserNeighborhood" class="col-form-label">Bairro</label>
+                                <div>
+                                    <input type="text" class="form-control" id="editUserNeighborhood"
+                                        name="editUserNeighborhood">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="editUserAddress" class="col-form-label">Endereço</label>
                                 <div>
                                     <input type="text" class="form-control" id="editUserAddress" name="editUserAddress">
@@ -185,6 +211,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         name="editUserAddressNumber">
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <label for="editUserComplement" class="col-form-label">Complemento</label>
+                                <div>
+                                    <input type="text" class="form-control" id="editUserComplement"
+                                        name="editUserComplement">
+                                </div>
+                            </div>
+
                         </div>
                         <div class="col-md-6">
 

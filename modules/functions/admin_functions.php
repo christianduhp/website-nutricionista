@@ -22,9 +22,13 @@ function renderUserRow($user)
             <td>{$user['height']}</td>
             <td>{$user['gender']}</td>
             <td>{$user['nationality']}</td>
+            <td>{$user['uf']}</td>
             <td>{$user['city']}</td>
+            <td>{$user['cep']}</td>
+            <td>{$user['neighborhood']}</td>
             <td>{$user['address']}</td>
             <td>{$user['address_number']}</td>
+            <td>{$user['complement']}</td>
             <td>{$user['created_at']}</td>
             <td>{$user['occupation']}</td>
             <td>{$user['communication_preference']}</td>
@@ -34,6 +38,8 @@ function renderUserRow($user)
         </tr>
     HTML;
 }
+
+
 
 function handleUserFormSubmission()
 {
@@ -56,7 +62,12 @@ function handleUserFormSubmission()
                 $_POST['editCommunicationPreference'],
                 $_POST['editPaymentPreference'],
                 $_POST['editPlanName'],
-                $selectedQuestionnairesString
+                $selectedQuestionnairesString,
+                $_POST['editUserCEP'],
+                $_POST['editUserComplement'],
+                $_POST['editUserUF'],
+                $_POST['editUserNeighborhood'],
+               
             );
 
             $_SESSION['success'] = "Os dados foram alterados com sucesso.";

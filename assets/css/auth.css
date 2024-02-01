@@ -11,3 +11,11 @@ body {
 .container {
   border-radius: 2em;
 }
+
+.form-page {
+  display: none;
+}
+
+.form-page.active {
+  display: block;
+}

@@ -209,6 +209,8 @@ function deleteMeasurement($recordId)
     mysqli_close($connection);
 }
 
+
+
 function updateUser(
     $id,
     $email,
@@ -225,7 +227,11 @@ function updateUser(
     $communication_preference,
     $payment_preference,
     $plan_name,
-    $selected_questionnaires
+    $selected_questionnaires,
+    $address_CEP,
+    $address_complement,
+    $address_uf,
+    $address_neighborhood
 ) {
     global $connection;
 
@@ -244,13 +250,17 @@ function updateUser(
                   communication_preference = ?,
                   payment_preference = ?,
                   plan_name = ?,
-                  selected_questionnaires = ?
+                  selected_questionnaires = ?,
+                  cep = ?,
+                  complement = ?,
+                  uf = ?,
+                  neighborhood = ?
               WHERE id = ?";
 
     $stmt = $connection->prepare($query);
 
     $stmt->bind_param(
-        "sssssssssssssssi",
+        "sssssssssssssssssssi",
         $name,
         $email,
         $birthdate,
@@ -266,6 +276,10 @@ function updateUser(
         $payment_preference,
         $plan_name,
         $selected_questionnaires,
+        $address_CEP,
+        $address_complement,
+        $address_uf,
+        $address_neighborhood,
         $id
     );
 

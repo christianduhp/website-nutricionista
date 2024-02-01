@@ -8,9 +8,13 @@ $(document).ready(function () {
     selectedUserHeight: "",
     selectedUserGender: "",
     selectedUserNationality: "",
+    selectedUserUF: "", 
     selectedUserCity: "",
+    selectedUserCEP: "", 
+    selectedUserNeighborhood: "", 
     selectedUserAddress: "",
     selectedUserAddressNumber: "",
+    selectedUserAddressComplement: "", 
     selectedUserCreatedAt: "",
     selectedUserOccupation: "",
     selectedCommunicationPreference: "",
@@ -26,11 +30,20 @@ $(document).ready(function () {
       $("#editUserHeight").val(this.selectedUserHeight.trim());
       $("#editUserGender").val(this.selectedUserGender.trim());
       $("#editUserNationality").val(this.selectedUserNationality.trim());
+      $("#editUserUF").val(this.selectedUserUF.trim());
       $("#editUserCity").val(this.selectedUserCity.trim());
+      $("#editUserCEP").val(this.selectedUserCEP.trim()); 
+      $("#editUserNeighborhood").val(this.selectedUserNeighborhood.trim()); 
       $("#editUserAddress").val(this.selectedUserAddress.trim());
       $("#editUserAddressNumber").val(this.selectedUserAddressNumber.trim());
+      $("#editUserComplement").val(this.selectedUserAddressComplement.trim()); 
       $("#editUserCreatedAt").val(this.selectedUserCreatedAt.trim());
       $("#editUserOccupation").val(this.selectedUserOccupation.trim());
+      $("#editCommunicationPreference").val(this.selectedCommunicationPreference.trim()); 
+      $("#editPaymentPreference").val(this.selectedPaymentPreference.trim()); 
+      $("#editPlanName").val(this.selectedPlanName.trim()); 
+      $("#editQuestionnaires").val(this.selectedQuestionnaires.trim());
+      
 
       // Preencher a preferência de comunicação
       $("#editCommunicationPreference option").prop("selected", false);
@@ -79,15 +92,19 @@ $(document).ready(function () {
       userHeight,
       userGender,
       userNationality,
+      userUF,
       userCity,
+      userCEP,
+      userNeighborhood,
       userAddress,
       userAddressNumber,
+      userAddressComplement,
       userCreatedAt,
       userOccupation,
       userCommunicationPreference,
       userPaymentPreference,
       userplanName,
-      selectedQuestionnaires
+      selectedQuestionnaires,
     ) {
       this.selectedUserId = userId;
       this.selectedUserName = userName;
@@ -97,9 +114,13 @@ $(document).ready(function () {
       this.selectedUserHeight = userHeight;
       this.selectedUserGender = userGender;
       this.selectedUserNationality = userNationality;
+      this.selectedUserUF = userUF;
       this.selectedUserCity = userCity;
+      this.selectedUserCEP = userCEP;
+      this.selectedUserNeighborhood = userNeighborhood;
       this.selectedUserAddress = userAddress;
       this.selectedUserAddressNumber = userAddressNumber;
+      this.selectedUserAddressComplement = userAddressComplement;
       this.selectedUserCreatedAt = userCreatedAt;
       this.selectedUserOccupation = userOccupation;
       this.selectedCommunicationPreference = userCommunicationPreference;
@@ -152,15 +173,20 @@ $(document).ready(function () {
     const userHeight = $row.find("td:nth-child(6)").text();
     const userGender = $row.find("td:nth-child(7)").text();
     const userNationality = $row.find("td:nth-child(8)").text();
-    const userCity = $row.find("td:nth-child(9)").text();
-    const userAddress = $row.find("td:nth-child(10)").text();
-    const userAddressNumber = $row.find("td:nth-child(11)").text();
-    const userCreatedAt = $row.find("td:nth-child(12)").text();
-    const userOccupation = $row.find("td:nth-child(13)").text();
-    const userCommunicationPreference = $row.find("td:nth-child(14)").text();
-    const userPaymentPreference = $row.find("td:nth-child(15)").text();
-    const userplanName = $row.find("td:nth-child(16)").text();
-    const selectedQuestionnaires = $row.find("td:nth-child(17)").text();
+    const userUF = $row.find("td:nth-child(9)").text();
+    const userCity = $row.find("td:nth-child(10)").text();
+    const userCEP = $row.find("td:nth-child(11)").text();
+    const userNeighborhood = $row.find("td:nth-child(12)").text();
+    const userAddress = $row.find("td:nth-child(13)").text();
+    const userAddressNumber = $row.find("td:nth-child(14)").text();
+    const userAddressComplement = $row.find("td:nth-child(15)").text();
+    const userCreatedAt = $row.find("td:nth-child(16)").text();
+    const userOccupation = $row.find("td:nth-child(17)").text();
+    const userCommunicationPreference = $row.find("td:nth-child(18)").text();
+    const userPaymentPreference = $row.find("td:nth-child(19)").text();
+    const userplanName = $row.find("td:nth-child(20)").text();
+    const selectedQuestionnaires = $row.find("td:nth-child(21)").text();
+    
     UserEditor.openEditModal(
       userId,
       userName,
@@ -170,15 +196,19 @@ $(document).ready(function () {
       userHeight,
       userGender,
       userNationality,
+      userUF,
       userCity,
+      userCEP,
+      userNeighborhood,
       userAddress,
       userAddressNumber,
+      userAddressComplement,
       userCreatedAt,
       userOccupation,
       userCommunicationPreference,
       userPaymentPreference,
       userplanName,
-      selectedQuestionnaires
+      selectedQuestionnaires,
     );
   }
 
@@ -199,14 +229,19 @@ $(document).ready(function () {
         editUserHeight: $("#editUserHeight").val(),
         editUserGender: $("#editUserGender").val(),
         editUserNationality: $("#editUserNationality").val(),
+        editUserUF: $("#editUserUF").val(),
         editUserCity: $("#editUserCity").val(),
+        editUserCEP: $("#editUserCEP").val(),
+        editUserNeighborhood: $("#editUserNeighborhood").val(), 
         editUserAddress: $("#editUserAddress").val(),
         editUserAddressNumber: $("#editUserAddressNumber").val(),
+        editUserComplement: $("#editUserComplement").val(), 
         editUserOccupation: $("#editUserOccupation").val(),
         editCommunicationPreference: $("#editCommunicationPreference").val(),
         editPaymentPreference: $("#editPaymentPreference").val(),
         editPlanName: $("#editPlanName").val(),
         editQuestionnaires: selectedQuestionnaires,
+        
       },
       success: UserEditor.handleAjaxSuccess.bind(UserEditor),
       error: UserEditor.handleAjaxError.bind(UserEditor),

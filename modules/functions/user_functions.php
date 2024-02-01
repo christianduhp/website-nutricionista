@@ -30,9 +30,15 @@ function handleProfileRequest()
             $city = isset($_POST['city']) ? $_POST['city'] : $userData['city'];
             $address = isset($_POST['address']) ? $_POST['address'] : $userData['address'];
             $addressNumber = isset($_POST['address_number']) ? $_POST['address_number'] : $userData['address_number'];
+            $address_CEP = isset($_POST['cep']) ? $_POST['cep'] : $userData['cep'];
+            $address_complement = isset($_POST['complement']) ? $_POST['complement'] : $userData['address_complement'];
+            $address_uf = isset($_POST['uf']) ? $_POST['uf'] : $userData['uf'];
+            $address_neighborhood = isset($_POST['neighborhood']) ? $_POST['neighborhood'] : $userData['neighborhood'];
+
+            
             $occupation = isset($_POST['occupation']) ? $_POST['occupation'] : null;
-            $communicationPreference = isset($_POST['communication_preference']) ? $_POST['communication_preference'] : null;
-            $paymentP2reference = isset($_POST['payment_preference']) ? $_POST['payment_preference'] : null;
+            $communication_preference = isset($_POST['communication_preference']) ? $_POST['communication_preference'] : null;
+            $payment_preference = isset($_POST['payment_preference']) ? $_POST['payment_preference'] : null;
 
             if (!isset($_POST['delete'])) {
                 updateUser(
@@ -48,10 +54,14 @@ function handleProfileRequest()
                     $address,
                     $addressNumber,
                     $occupation,
-                    $communicationPreference,
-                    $paymentP2reference,
+                    $communication_preference,
+                    $payment_preference,
                     $planName,
-                    $selectedQuestionnaires
+                    $selectedQuestionnaires,
+                    $address_CEP,
+                    $address_complement,
+                    $address_uf,
+                    $address_neighborhood                    
                 );
 
                 if (isset($_FILES["profile_picture"]) && $_FILES["profile_picture"]["error"] === UPLOAD_ERR_OK) {

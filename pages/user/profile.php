@@ -83,10 +83,17 @@ handleProfileRequest();
             <div class="col-md-4 my-3">
                 <h4 class="mb-3">Endereço</h4>
                 <hr>
+
                 <div class="form-group my-3">
-                    <label for="city">Cidade</label>
-                    <input type="text" id="city" name="city" class="form-control" value="<?= $userData['city']; ?>"
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" class="form-control" value="<?= $userData['cep']; ?>"
                         required>
+                </div>
+
+                <div class="form-group my-3">
+                    <label for="neighborhood">Bairro</label>
+                    <input type="text" id="neighborhood" name="neighborhood" class="form-control"
+                        value="<?= $userData['neighborhood']; ?>" required>
                 </div>
 
                 <div class="form-group my-3">
@@ -99,6 +106,23 @@ handleProfileRequest();
                     <label for="address_number">Número</label>
                     <input type="text" id="address_number" name="address_number" class="form-control"
                         value="<?= $userData['address_number']; ?>" required>
+                </div>
+
+                <div class="form-group my-3">
+                    <label for="complement">Complemento</label>
+                    <input type="text" id="complement" name="complement" class="form-control" value="<?= $userData['complement']; ?>"
+                        required>
+                </div>
+
+                <div class="form-group my-3">
+                    <label for="city">Cidade</label>
+                    <input type="text" id="city" name="city" class="form-control" value="<?= $userData['city']; ?>"
+                        required>
+                </div>
+
+                <div class="form-group my-3">
+                    <label for="uf">UF</label>
+                    <input type="text" id="uf" name="uf" class="form-control" value="<?= $userData['uf']; ?>" required>
                 </div>
             </div>
 
@@ -168,3 +192,7 @@ handleProfileRequest();
 </div>
 
 <script src="../../assets/js/profile_user_script.js"></script>
+
+
+
+
