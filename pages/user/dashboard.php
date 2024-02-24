@@ -79,8 +79,8 @@ foreach ($parameterNames as $parameter) {
       <div class="offcanvas-body ">
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="dashboard.php" class="gap-3 btn fw-semibold btn_sidebar  m-1 py-2 d-flex align-items-center active"
-              aria-current="page">
+            <a href="<?php echo linkTo('dashboard'); ?>"
+              class="gap-3 btn fw-semibold btn_sidebar  m-1 py-2 d-flex align-items-center active" aria-current="page">
               <i class="fs-5  fa-solid fa-chart-line"></i> Dashboard
             </a>
           </li>
@@ -140,8 +140,8 @@ foreach ($parameterNames as $parameter) {
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="dashboard.php" class="gap-3 btn fw-semibold btn_sidebar  m-1 py-2 d-flex align-items-center active"
-              aria-current="page">
+            <a href="<?php echo linkTo('dashboard'); ?>"
+              class="gap-3 btn fw-semibold btn_sidebar  m-1 py-2 d-flex align-items-center active" aria-current="page">
               <i class="fs-5  fa-solid fa-chart-line"></i> Dashboard
             </a>
           </li>

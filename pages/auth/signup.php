@@ -28,14 +28,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="d-flex justify-content-center align-items-center">
                 <div class="col-md-12 my-2 d-flex flex-column justify-content-center align-items-center">
                     <div class="card border-0">
-                        <img src="../../assets/images/healthy-lifestyle.png" class="img-fluid w-25 mx-auto d-block"
-                            alt="Security Image">
+                        <div class="col col-md-4 mx-auto">
+                            <img src="../../assets/images/healthy-lifestyle.png"
+                                class="img-fluid w-md-25 mx-auto d-block" alt="Security Image" style="max-width: 100%;">
+                        </div>
                         <h3 class="text-center my-4">Cadastro</h3>
 
                         <div class="card-body p-0 p-md-4">
                             <form id="signupForm" action="signup.php" method="POST">
                                 <div class="form-page active" id="page1">
-                                    <div class="row">   
+                                    <div class="row">
 
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -211,7 +213,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
                         <div class="text-center">
-                            <p>Já tem uma conta? <a href="login.php">Faça login</a></p>
+                            <p>Já tem uma conta? <a href="<?php echo linkTo('login'); ?>">Faça login</a></p>
                         </div>
                     </div>
                 </div>

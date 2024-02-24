@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div id="loginMessages" class="mt-2">
                 </div>
 
-                <a href="recover_password.php">Esqueci minha senha</a>
+                <a href="<?php echo linkTo('recoverPassword'); ?>">Esqueci minha senha</a>
 
               </form>
             </div>
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       </div>
       <div class="my-2 text-center">
-        <p>Não tem uma conta? <a href="../../index.html#consulta">Entre em contato</a></p>
+        <p>Não tem uma conta? <a href="../../index#consulta">Entre em contato</a></p>
       </div>
     </div>
   </section>

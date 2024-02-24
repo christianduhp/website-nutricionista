@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           displayAlert('error');
           displayAlert('success'); ?>
           <div class="card border-0">
-          <h3 class="text-center mb-4">Recuperação de Senha</h3>
+            <h3 class="text-center mb-4">Recuperação de Senha</h3>
             <div class="card-body text-center p-0 p-md-4">
               <form action="recover_password.php" method="POST">
                 <div class="form-group">
@@ -40,7 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
 
                 <div class="d-flex flex-column flex-md-row justify-content-center align-items-stretch mb-3">
-                  <a href="login.php" class="btn btn-secondary my-3 mx-md-2 rounded-pill">Ir para Login</a>
+                  <a href="<?php echo linkTo('login'); ?>" class="btn btn-secondary my-3 mx-md-2 rounded-pill">Ir para
+                    Login</a>
                   <button type="submit" name="submit" class="btn btn-primary my-md-3 rounded-pill">Enviar Link de
                     Recuperação</button>
                 </div>

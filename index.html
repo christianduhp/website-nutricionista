@@ -50,7 +50,7 @@
             </ul>
             <ul class="navbar-nav ml-auto">
               <li class="nav-item px-lg-2">
-                <a href="pages/user/dashboard.php" class="btn btn-primary-2 d-flex align-items-center">
+                <a href="pages/user/dashboard" class="btn btn-primary-2 d-flex align-items-center">
                   <i class="fas fa-user px-2"></i> Login
                 </a>
               </li>
@@ -124,13 +124,12 @@
     </section>
 
     <section id="sobre" class="sobre">
-      <section class="justify-content-center ">
-        <div class="card d-flex flex-column flex-md-row align-items-center">
-          <img src="assets/images/professional.png" class="card-img-top img-profissional img-fluid"
-            alt="Foto Profissional">
-          <div class="card-body p-5 d-flex flex-column align-items-center align-items-md-start align-items-lg-start">
-            <h4 class="card-title about-title m-0 fs-2"></h4>
-            <p class="card-text about-text fs-5 my-5 text-left">
+      <section class="justify-content-center mx-md-5">
+        <div class="d-flex flex-column flex-md-row align-items-center">
+          <img src="assets/images/professional.png" class="img-profissional img-fluid mt-4 mt-md-0" alt="Foto Profissional">
+          <div class="p-5 d-flex flex-column align-items-center align-items-md-start align-items-lg-start">
+            <h4 class="about-title m-0 fs-2"></h4>
+            <p class="about-text fs-5 my-5 text-left">
             </p>
             <a href="#consulta" class="btn-primary-2 p-2 py-3 rounded fw-bold">Agendar Consulta</a>
           </div>
@@ -234,7 +233,8 @@
       </section>
 
       <section>
-        <h4 class="servicos_title fw-bold fs-md-1 fw-bold mb-3 mt-5 mt-md-0 text display-4 text-center">Como funciona?</h4>
+        <h4 class="servicos_title fw-bold fs-md-1 fw-bold mb-3 mt-5 mt-md-0 text display-4 text-center">Como funciona?
+        </h4>
         <div class="row-cols-1 mx-3 my-5">
           <div class="col my-3">
             <div class="card d-flex flex-column flex-md-row align-items-center p-3">
@@ -423,6 +423,8 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  <script src="../../assets/js/analytics.js"></script>
+  
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       fetch('data/landingpage.json')
@@ -479,7 +481,7 @@
             contactPreference: contactPreference
           },
           success: function (response) {
-           
+
             $("#loadingSpinner").addClass("d-none");
             $("#alertMessages").prepend(response);
 

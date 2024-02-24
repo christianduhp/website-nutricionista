@@ -169,7 +169,7 @@ handleProfileRequest();
                 </div>
 
                 <div class="form-group text-center mt-4 ">
-                    <a href="../auth/recover_password.php"
+                    <a href="<?php linkTo('recoverPassword'); ?>"
                         class="card flex-row align-items-center justify-content-center gap-2"> <i
                             class="fa-solid fa-key"></i> Trocar de senha</a>
                 </div>

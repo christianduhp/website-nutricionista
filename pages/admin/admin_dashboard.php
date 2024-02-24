@@ -67,7 +67,7 @@ $recipesInfo = countAndSizeImages($recipesDir);
             <div class="offcanvas-body ">
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="admin_dashboard.php"
+                        <a href="<?php linkTo('admin'); ?>"
                             class="gap-3 btn fw-semibold btn_sidebar m-1 py-2 d-flex align-items-center active"
                             aria-current="page">
                             <i class="fs-5  fa-solid fa-chart-line"></i> Dashboard
@@ -115,7 +115,7 @@ $recipesInfo = countAndSizeImages($recipesDir);
                 <hr>
                 <div>
                     <?php if (isAdmin($_SESSION['email'])): ?>
-                        <a href="<?php echo linkTo('home'); ?>"
+                        <a href="<?php echo linkTo('dashboard'); ?>"
                             class="btn fw-semibold btn_sidebar m-1 py-2 px-0 d-flex align-items-center">
                             <i class="fs-5 mx-2 fas fa-user"></i> Usuário
                         </a>
@@ -143,7 +143,7 @@ $recipesInfo = countAndSizeImages($recipesDir);
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="admin_dashboard.php"
+                        <a href="<?php linkTo('admin'); ?>"
                             class="gap-3 btn fw-semibold btn_sidebar  m-1 py-2 d-flex align-items-center active"
                             aria-current="page">
                             <i class="fs-5  fa-solid fa-chart-line"></i> Dashboard
@@ -193,7 +193,7 @@ $recipesInfo = countAndSizeImages($recipesDir);
                 <div class="d-flex flex-column align-items-start mx-1">
 
                     <?php if (isAdmin($_SESSION['email'])): ?>
-                        <a href="<?php echo linkTo('home'); ?>" class="gap-3 btn btn_sidebar text-decoration-none">
+                        <a href="<?php echo linkTo('dashboard'); ?>" class="gap-3 btn btn_sidebar text-decoration-none">
                             <i class="fs-5 fas fa-user"></i> Usuário
                         </a>
                     <?php endif; ?>
