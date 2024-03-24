@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/landingpage.css">
 
 </head>
@@ -126,7 +127,8 @@
     <section id="sobre" class="sobre">
       <section class="justify-content-center mx-md-5">
         <div class="d-flex flex-column flex-md-row align-items-center">
-          <img src="assets/images/professional.png" class="img-profissional img-fluid mt-4 mt-md-0" alt="Foto Profissional">
+          <img src="assets/images/professional.png" class="img-profissional img-fluid mt-4 mt-md-0"
+            alt="Foto Profissional">
           <div class="p-5 d-flex flex-column align-items-center align-items-md-start align-items-lg-start">
             <h4 class="about-title m-0 fs-2"></h4>
             <p class="about-text fs-5 my-5 text-left">
@@ -159,23 +161,23 @@
           <!-- swiper visível apenas em tablet e desktop -->
           <div class="swiper px-5 mb-4 d-none d-md-block">
             <div class="swiper-wrapper ">
-              <div class="swiper-slide rounded-4">
+              <div class="swiper-slide desktop_swiper_slide rounded-4">
                 <img src="assets/images/exclusivo-dashboard.png" alt="Dashboard Exclusivo" class="img-fluid">
                 <h4 class="label">Dashboard Exclusivo</h4>
               </div>
 
-              <div class="swiper-slide rounded-4">
+              <div class="swiper-slide desktop_swiper_slide rounded-4">
                 <img src="assets/images/exclusivo-plano-alimentar.png" alt="Plano Alimentar Exclusivo"
                   class="img-fluid">
                 <h4 class="label">Plano Alimentar Personalizado</h4>
               </div>
 
-              <div class="swiper-slide rounded-4">
+              <div class="swiper-slide desktop_swiper_slide rounded-4">
                 <img src="assets/images/exclusivo-receitas.png" alt="Receitas Exclusivas" class="img-fluid">
                 <h4 class="label">Receitas Exclusivas</h4>
               </div>
 
-              <div class="swiper-slide rounded-4">
+              <div class="swiper-slide desktop_swiper_slide rounded-4">
                 <img src="assets/images/exclusivo-questionarios.png" alt="Questionários Exclusivos" class="img-fluid">
                 <h4 class="label">Questionários Personalizados</h4>
               </div>
@@ -183,48 +185,62 @@
           </div>
 
           <!-- swiper visível apenas em mobile -->
-          <div class="container d-md-none">
-            <h2 class="text text-center mt-5 mb-4">Você terá acesso a:</h2>
-            <div class="row">
-              <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card flex-column rounded-4 text-center">
-                  <img src="assets/images/exclusivo-dashboard.png" alt="Dashboard Exclusivo"
-                    class="card-img-top img-fluid rounded-4">
-                  <div class="card-body">
-                    <h4 class="card-title label">Dashboard Exclusivo</h4>
+          <div class="container d-md-none overflow-hidden mb-5">
+            <h2 class="text text-center mb-4">Você terá acesso a:</h2>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card flex-column rounded-4 text-center">
+                      <img src="assets/images/exclusivo-dashboard.png" alt="Dashboard Exclusivo"
+                        class="card-img-top img-fluid rounded-4">
+                      <div class="card-body">
+                        <h4 class="card-title label">Dashboard Exclusivo</h4>
+                        <p>Acompanhe o progresso dos seus objetivos de forma visual e intuitiva.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+                <div class="swiper-slide">
+                  <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card flex-column rounded-4 text-center">
+                      <img src="assets/images/exclusivo-plano-alimentar.png" alt="Plano Alimentar Exclusivo"
+                        class="card-img-top img-fluid rounded-4">
+                      <div class="card-body">
+                        <h4 class="card-title label">Plano Alimentar Personalizado</h4>
+                        <p>Você terá acesso a um plano alimentar de acordo com suas necessidades e objetivos.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card flex-column rounded-4 text-center">
+                      <img src="assets/images/exclusivo-receitas.png" alt="Receitas Exclusivas"
+                        class="card-img-top img-fluid rounded-4">
+                      <div class="card-body">
+                        <h4 class="card-title label">Receitas Exclusivas</h4>
+                        <p>Confira as receitas para diversificar sua dieta e manter uma alimentação saudável.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card flex-column rounded-4 text-center">
+                      <img src="assets/images/exclusivo-questionarios.png" alt="Questionários Exclusivos"
+                        class="card-img-top img-fluid rounded-4">
+                      <div class="card-body">
+                        <h4 class="card-title label">Questionários Personalizados</h4>
+                        <p>Com os questionários, terei uma melhor compreensão dos seus hábitos e objetivos de saúde.</p>
 
-              <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card flex-column rounded-4 text-center">
-                  <img src="assets/images/exclusivo-plano-alimentar.png" alt="Plano Alimentar Exclusivo"
-                    class="card-img-top img-fluid rounded-4">
-                  <div class="card-body">
-                    <h4 class="card-title label">Plano Alimentar Personalizado</h4>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card flex-column rounded-4 text-center">
-                  <img src="assets/images/exclusivo-receitas.png" alt="Receitas Exclusivas"
-                    class="card-img-top img-fluid rounded-4">
-                  <div class="card-body">
-                    <h4 class="card-title label">Receitas Exclusivas</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card flex-column rounded-4 text-center">
-                  <img src="assets/images/exclusivo-questionarios.png" alt="Questionários Exclusivos"
-                    class="card-img-top img-fluid rounded-4">
-                  <div class="card-body">
-                    <h4 class="card-title label">Questionários Personalizados</h4>
-                  </div>
-                </div>
-              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
@@ -422,9 +438,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="../../assets/js/analytics.js"></script>
-  
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       fetch('data/landingpage.json')
@@ -461,6 +477,19 @@
       },
 
     });
+
+
+    var mobile_swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      speed: 500,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      loop: true
+    });
+
 
     $(document).ready(function () {
       $("#submitButton").click(function () {

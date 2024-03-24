@@ -197,15 +197,15 @@ a {
 
 }
 
-.swiper-slide {
+.desktop_swiper_slide {
     position: relative;
 }
 
-.swiper-slide img {
+.desktop_swiper_slide img {
     width: 100%;
 }
 
-.swiper-slide h4 {
+.desktop_swiper_slide h4 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -222,6 +222,12 @@ a {
     margin: auto;
 }
 
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: auto;
+    bottom: auto;
+    --swiper-theme-color: var(--main-color);
+}
 
 @media (max-width: 768px) {
 
