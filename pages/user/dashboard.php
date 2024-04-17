@@ -1,7 +1,7 @@
 <?php
-include_once(__DIR__ . '/../../modules/authentication/authentication_functions.php');
-include_once(__DIR__ . '/../../modules/functions/routes.php');
-include_once(__DIR__ . '/../../modules/database/users_functions.php');
+include_once (__DIR__ . '/../../modules/authentication/authentication_functions.php');
+include_once (__DIR__ . '/../../modules/functions/routes.php');
+include_once (__DIR__ . '/../../modules/database/users_functions.php');
 
 isLoggedIn();
 
@@ -57,7 +57,7 @@ foreach ($parameterNames as $parameter) {
 <body>
 
   <header>
-    <nav class="navbar d-block d-lg-none position-fixed w-100">
+    <nav class="navbar d-block d-lg-none position-fixed w-100 z-3">
       <div class="container-fluid align-items-center justify-content-between">
         <a class="navbar-brand align-self-center mx-3" href="#"><img src="../../assets/images/icon.png"
             alt="Logo Daniel Lima Nutricionista" class="" width="50"></a>
@@ -180,11 +180,11 @@ foreach ($parameterNames as $parameter) {
           <?php endif; ?>
 
 
-          <a href="<?php linkTo('landingpage'); ?>" class="gap-3 btn btn_sidebar text-decoration-none">
+          <a href="<?php echo linkTo('landingpage'); ?>" class="gap-3 btn btn_sidebar text-decoration-none">
             <i class="fa-solid fa-globe"></i> Website
           </a>
 
-          <a href="<?php linkTo('exit'); ?>" class="gap-3 btn btn_sidebar text-decoration-none">
+          <a href="<?php echo linkTo('exit'); ?>" class="gap-3 btn btn_sidebar text-decoration-none">
             <i class="fs-5 fas fa-door-open"></i> Sair
           </a>
         </div>
@@ -192,7 +192,7 @@ foreach ($parameterNames as $parameter) {
     </aside>
 
 
-    <section id="page-content" class="container-fluid main_container align-items-center d-flex flex-column">
+    <section id="page-content" class="container-fluid main_container align-items-center d-flex flex-column vh-100">
 
       <!-- Foto de perfil e nome -->
       <div class="card name_container w-100 d-flex flex-row align-items-center justify-content-center p-3 mt-3">
@@ -325,6 +325,8 @@ foreach ($parameterNames as $parameter) {
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../../assets/js/charts.js"></script>
 
+  <script src="../../assets/js/sidebar_handler_script.js"></script>
+
   <script>
     <?php
     $colorPalette = [
@@ -376,46 +378,6 @@ foreach ($parameterNames as $parameter) {
       createCharts();
     <?php endif; ?>
 
-
-    $("#sidebar .ajax-link, #offcanvasNavbar .ajax-link-offcanvas").on("click", function (e) {
-      e.preventDefault();
-      $("#messages").empty();
-
-      // Check if the clicked link already has the 'active' class
-      if (!$(this).hasClass("active")) {
-        // Remove the 'active' class from all links
-        $("#sidebar .nav-item a, #offcanvasNavbar .nav-item a").removeClass("active");
-
-        // Add the 'active' class to the clicked link
-        $(this).addClass("active");
-
-        var pageUrl = $(this).attr("href");
-        console.log(pageUrl);
-
-        // Close the offcanvas if it is open
-        $("#offcanvasNavbar").offcanvas('hide');
-
-        // Make an AJAX request to get the page content
-        $.ajax({
-          url: pageUrl,
-          type: "GET",
-          dataType: "html",
-          success: function (data) {
-            // Update the content of the page div with the returned content
-            $("#page-content").html(data);
-
-            if (window.matchMedia("(max-width: 769px)").matches) {
-              $("#sidebar").toggleClass("active");
-            }
-          },
-          error: function (xhr, status, error) {
-            // Handle errors and display details in the console
-            console.error("Status: " + status);
-            console.error("Error: " + error);
-          },
-        });
-      }
-    });
   </script>
 </body>
 

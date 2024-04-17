@@ -1,9 +1,9 @@
 <?php
 
-include_once(__DIR__ . '/../../modules/authentication/authentication_functions.php');
-include_once(__DIR__ . '/../../modules/database/database.php');
-include_once(__DIR__ . '/../../modules/database/users_functions.php');
-include_once(__DIR__ . '/../../modules/functions/admin_functions.php');
+include_once (__DIR__ . '/../../modules/authentication/authentication_functions.php');
+include_once (__DIR__ . '/../../modules/database/database.php');
+include_once (__DIR__ . '/../../modules/database/users_functions.php');
+include_once (__DIR__ . '/../../modules/functions/admin_functions.php');
 
 
 isUserAdmin();
@@ -24,28 +24,23 @@ $recipesInfo = countAndSizeImages($recipesDir);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="../../assets/images/icon.png" type="image/x-icon">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/landingpage.css">
     <link rel="stylesheet" href="../../assets/css/user.css">
     <link rel="stylesheet" href="../../assets/css/admin.css">
+
     <title>Painel Admin</title>
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar d-block d-lg-none position-fixed w-100">
+        <nav class="navbar d-block d-lg-none position-fixed w-100 z-3">
             <div class="container-fluid align-items-center justify-content-between">
                 <a class="navbar-brand align-self-center mx-3" href="#"><img src="../../assets/images/icon.png"
                         alt="Logo Daniel Lima Nutricionista" class="" width="50"></a>
@@ -143,26 +138,26 @@ $recipesInfo = countAndSizeImages($recipesDir);
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="<?php linkTo('admin'); ?>"
+                        <a href="<?php echo linkTo('admin'); ?>"
                             class="gap-3 btn fw-semibold btn_sidebar  m-1 py-2 d-flex align-items-center active"
                             aria-current="page">
                             <i class="fs-5  fa-solid fa-chart-line"></i> Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php linkTo('adminUsers'); ?>"
+                        <a href="<?php echo linkTo('adminUsers'); ?>"
                             class="gap-3 btn fw-semibold btn_sidebar ajax-link m-1 py-2 d-flex align-items-center">
                             <i class="fs-5 fa-solid fa-users"></i> Usuários
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php linkTo('adminMeals'); ?>"
+                        <a href="<?php echo linkTo('adminMeals'); ?>"
                             class="gap-3 btn fw-semibold btn_sidebar ajax-link m-1 py-2 d-flex align-items-center">
                             <i class="fs-5 fa-solid fa-utensils"></i> Planos Alimentares
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="<?php linkTo('adminRecipes'); ?>"
+                        <a href="<?php echo linkTo('adminRecipes'); ?>"
                             class="gap-3 btn fw-semibold btn_sidebar ajax-link m-1 py-2 d-flex align-items-center">
                             <i class="fs-5 fa-solid fa-bowl-food"></i> Receitas
                         </a>
@@ -175,13 +170,13 @@ $recipesInfo = countAndSizeImages($recipesDir);
                         <ul class="collapse list-unstyled" id="homeSubmenu">
                             <li class="nav-item">
                                 <a class="gap-3 btn fw-semibold btn_sidebar ajax-link m-1 py-2 d-flex align-items-center"
-                                    href="<?php linkTo('adminSmtp'); ?>">
+                                    href="<?php echo linkTo('adminSmtp'); ?>">
                                     <i class="fs-5 fas fa-at"></i> E-mail
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="gap-3 btn fw-semibold btn_sidebar ajax-link m-1 py-2 d-flex align-items-center"
-                                    href="<?php linkTo('adminLandingPage'); ?>">
+                                    href="<?php echo linkTo('adminLandingPage'); ?>">
                                     <i class="fs-5 fas fa-paint-brush"></i> Landing page
                                 </a>
                             </li>
@@ -198,18 +193,18 @@ $recipesInfo = countAndSizeImages($recipesDir);
                         </a>
                     <?php endif; ?>
 
-                    <a href="<?php linkTo('landingpage'); ?>" class="gap-3 btn btn_sidebar text-decoration-none">
+                    <a href="<?php echo linkTo('landingpage'); ?>" class="gap-3 btn btn_sidebar text-decoration-none">
                         <i class="fa-solid fa-globe"></i> Website
                     </a>
 
-                    <a href="<?php linkTo('exit'); ?>" class="gap-3 btn btn_sidebar text-decoration-none">
+                    <a href="<?php echo linkTo('exit'); ?>" class="gap-3 btn btn_sidebar text-decoration-none">
                         <i class="fs-5 fas fa-door-open"></i> Sair
                     </a>
                 </div>
             </div>
         </aside>
 
-        <section id="page-content" class="container-fluid main_container align-items-center d-flex flex-column">
+        <section id="page-content" class="container-fluid main_container align-items-center d-flex flex-column vh-100">
             <div class="wrapper d-flex w-100">
                 <!-- container -->
                 <div class="w-100 p-md-3">
@@ -279,22 +274,19 @@ $recipesInfo = countAndSizeImages($recipesDir);
 
     </main>
 
-
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-    <!-- Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Bootstrap JS (v5.3.2) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <script src="../../assets/js/sidebar_handler_script.js"></script>
     <script src="../../assets/js/charts.js"></script>
-    <script src="../../assets/js/dashboard_admin_script.js"></script>
+
+
+
 
     <script>
         const totalSize = 10000;

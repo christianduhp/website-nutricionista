@@ -1,5 +1,5 @@
 <?php
-include_once(__DIR__ . '/../../config.php');
+include_once (__DIR__ . '/../../config.php');
 
 $mealsNames = ['Café da Manhã', 'Lanche da Manhã', 'Almoço', 'Lanche da Tarde', 'Jantar'];
 $defaultFood = 'Alimento Padrão';
@@ -7,33 +7,44 @@ function fetchMealPlans()
 {
     global $connection;
 
-    $query = "SELECT * FROM meal_plans ORDER BY plan_name, option, meal_name";
-    $result = $connection->query($query);
+    try {
+        $query = "SELECT * FROM meal_plans ORDER BY plan_name, `option`, meal_name";
 
-    $mealPlans = [];
-    while ($row = mysqli_fetch_assoc($result)) {
-        $mealPlans[$row['plan_name']][$row['option']][$row['meal_name']][] = $row;
-    }
+        $result = $connection->query($query);
 
-
-    function mealOrder($meal)
-    {
-        global $mealsNames;
-        return array_search($meal, $mealsNames);
-    }
-
-    foreach ($mealPlans as $planName => $options) {
-        uksort($mealPlans[$planName], 'strnatcasecmp');
-        foreach ($options as $optionName => $meals) {
-            uksort($meals, function ($a, $b) {
-                return mealOrder($a) - mealOrder($b);
-            });
-            $mealPlans[$planName][$optionName] = $meals;
+        if (!$result) {
+            throw new Exception("Query execution failed: " . $connection->error);
         }
-    }
 
-    return $mealPlans;
+        $mealPlans = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $mealPlans[$row['plan_name']][$row['option']][$row['meal_name']][] = $row;
+        }
+
+        function mealOrder($meal)
+        {
+            global $mealsNames;
+            return array_search($meal, $mealsNames);
+        }
+
+        foreach ($mealPlans as $planName => $options) {
+            uksort($mealPlans[$planName], 'strnatcasecmp');
+            foreach ($options as $optionName => $meals) {
+                uksort($meals, function ($a, $b) {
+                    return mealOrder($a) - mealOrder($b);
+                });
+                $mealPlans[$planName][$optionName] = $meals;
+            }
+        }
+
+        return $mealPlans;
+    } catch (Exception $e) {
+        // Log the error or display a message to the user
+        echo "Error fetching meal plans: " . $e->getMessage();
+        return false; // Or handle the error in some appropriate way
+    }
 }
+
 
 function getMealPlan($planName)
 {
@@ -41,7 +52,7 @@ function getMealPlan($planName)
 
     $mealPlans = array();
 
-    $sql = "SELECT DISTINCT option FROM meal_plans WHERE plan_name = ?";
+    $sql = "SELECT DISTINCT `option` FROM meal_plans WHERE plan_name = ?";
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("s", $planName);
     $stmt->execute();
@@ -54,7 +65,7 @@ function getMealPlan($planName)
     $fullMealPlans = array();
 
     foreach ($mealPlans as $plan) {
-        $sql = "SELECT * FROM meal_plans WHERE option = '$plan' AND plan_name = '$planName'";
+        $sql = "SELECT * FROM meal_plans WHERE `option` = '$plan' AND plan_name = '$planName'";
         $result = $connection->query($sql);
 
         if ($result === false) {
@@ -119,7 +130,7 @@ function addFood($planName, $optionName, $mealName, $newFoodName)
         exit;
     }
 
-    $insertQuery = "INSERT INTO meal_plans (plan_name, option, meal_name, food_name) VALUES (?, ?, ?, ?)";
+    $insertQuery = "INSERT INTO meal_plans (plan_name, `option`, meal_name, food_name) VALUES (?, ?, ?, ?)";
     $stmt = mysqli_prepare($connection, $insertQuery);
     mysqli_stmt_bind_param($stmt, 'ssss', $planName, $optionName, $mealName, $newFoodName);
     mysqli_stmt_execute($stmt);
@@ -222,7 +233,7 @@ function foodExists($planName, $optionName, $mealName, $foodName)
     $checkPlanQuery = "SELECT COUNT(*) 
                         FROM meal_plans 
                         WHERE plan_name = ? 
-                        AND option = ?
+                        AND `option` = ?
                         AND meal_name = ?
                         AND food_name = ?";
 
